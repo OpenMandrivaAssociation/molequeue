@@ -7,6 +7,7 @@ Group:		Sciences/Chemistry
 Url:		http://openchemistry.org/molequeue
 Source:		https://github.com/OpenChemistry/molequeue/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
+BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Network)
