@@ -5,8 +5,8 @@ Summary:	Desktop integration of high performance computing resources
 License:	BSD
 Group:		Sciences/Chemistry
 Url:		http://openchemistry.org/molequeue
-Source:		https://github.com/OpenChemistry/molequeue/archive/%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	cmake
+Source0:	https://github.com/OpenChemistry/molequeue/archive/%{version}/%{name}-%{version}.tar.gz
+BuildRequires:	cmake ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
@@ -47,15 +47,14 @@ that use %{name}.
 
 %build
 %cmake_qt5 \
-	-DCMAKE_INSTALL_LIBDIR=%{_lib}
-
-%make
+	-G Ninja
+%ninja_build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
-%doc  LICENSE
+%license LICENSE
 %{_docdir}/MoleQueue
 %{_bindir}/%{name}
 %{_libdir}/%{name}/
@@ -64,4 +63,3 @@ that use %{name}.
 %files devel
 %{_includedir}/%{name}/
 %{_libdir}/cmake/%{name}/
-
