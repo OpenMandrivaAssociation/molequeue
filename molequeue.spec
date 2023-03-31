@@ -1,6 +1,6 @@
 Name:		molequeue
 Version:	0.9.0
-Release:	2
+Release:	3
 Summary:	Desktop integration of high performance computing resources
 License:	BSD
 Group:		Sciences/Chemistry
