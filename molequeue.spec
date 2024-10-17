@@ -4,7 +4,7 @@ Release:	3
 Summary:	Desktop integration of high performance computing resources
 License:	BSD
 Group:		Sciences/Chemistry
-Url:		http://openchemistry.org/molequeue
+Url:		https://openchemistry.org/molequeue
 Source0:	https://github.com/OpenChemistry/molequeue/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake ninja
 BuildRequires:	cmake(ECM)
